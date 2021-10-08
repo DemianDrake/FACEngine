@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FACEngine.v0.01", "FACEngine.v0.01\FACEngine.v0.01.vcxproj", "{93E74B06-7D04-4D91-AE49-59FAB7A13621}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93E74B06-7D04-4D91-AE49-59FAB7A13621}.Debug|x64.ActiveCfg = Debug|x64
+		{93E74B06-7D04-4D91-AE49-59FAB7A13621}.Debug|x64.Build.0 = Debug|x64
+		{93E74B06-7D04-4D91-AE49-59FAB7A13621}.Release|x64.ActiveCfg = Release|x64
+		{93E74B06-7D04-4D91-AE49-59FAB7A13621}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A8535EE-E24E-444B-B9AA-8D39B1F8EE3B}
+	EndGlobalSection
+EndGlobal
