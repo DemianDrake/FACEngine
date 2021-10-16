@@ -1,25 +1,85 @@
-#include <windows.h>
+#include "pch.h"
+/* ----------------------------------------------------------- */
+/*  Filename: WinMain.cpp                                      */
+/*  Author: Damián Ibarra Z. (aka Demian Drake)                */
+/*  Licence: MIT Licence                                       */
+/* ----------------------------------------------------------- */
 
-#define MAX_NAME_STRING 256
-#define HInstance() GetModuleHandle(NULL)
+
+/* ----------------------------------------------------------- */
+/*  Global Variables                                           */
+/* ----------------------------------------------------------- */
+#pragma region GlobalVariables
 
 WCHAR		WindowClass[MAX_NAME_STRING];
 WCHAR		WindowTitle[MAX_NAME_STRING];
 INT			WindowHeight;
 INT			WindowWidth;
+HICON		hIcon;
+
+#pragma endregion
+/* ----------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------- */
+/*  Function Declarations                                      */
+/* ----------------------------------------------------------- */
+#pragma region FunctionDeclarations
+
+VOID initializeVariables();
+VOID createWindowClass();
+VOID initializeWindow();
+VOID messageLoop();
+LRESULT CALLBACK WindowProcess(HWND hWnd, UINT message, WPARAM wparam, LPARAM lparam);
+
+#pragma endregion
+/* ----------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------- */
+/*  System Operations                                          */
+/* ----------------------------------------------------------- */
+#pragma region Operations
 
 int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
+	initializeVariables();
+	createWindowClass();
+	initializeWindow();
+	messageLoop();
 
-	/* - Initialize Global Variables - */
+	return 0;
+}
 
-	wcscpy_s(WindowClass, TEXT("EngineClass")); //wcscpy_s is for using WCHAR
-	wcscpy_s(WindowTitle, TEXT("FACEngine"));
+LRESULT CALLBACK WindowProcess(HWND hWnd, UINT message, WPARAM wparam, LPARAM lparam) {
+	switch (message) {
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	}
+
+	return DefWindowProc(hWnd, message, wparam, lparam);
+}
+
+#pragma endregion
+/* ----------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------- */
+/*  Function Definitions                                       */
+/* ----------------------------------------------------------- */
+#pragma region FunctionDefinitions
+
+VOID initializeVariables() {
+	LoadString(HInstance(), IDS_WINDOWCLASS, WindowClass, MAX_NAME_STRING);
+	LoadString(HInstance(), IDS_WINDOWTITLE, WindowTitle, MAX_NAME_STRING);
 
 	WindowWidth = 1366;
 	WindowHeight = 768;
 
-	/* - Create Window Class - */
+	hIcon = LoadIcon(HInstance(), MAKEINTRESOURCE(IDI_MAINICON));
+}
 
+VOID createWindowClass() {
 	WNDCLASSEX wcex;
 
 	wcex.cbSize = sizeof(WNDCLASSEX); //Class size
@@ -30,8 +90,8 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
 	wcex.hCursor = LoadCursor(nullptr, IDC_ARROW); //Cursor (IDC_ARROW -> Default arrow)
 	wcex.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH); //Background (NULL_BRUSH -> White bg)
 
-	wcex.hIcon = LoadIcon(0, IDI_APPLICATION); //Top-left corner icon
-	wcex.hIconSm = LoadIcon(0, IDI_APPLICATION); //Taskbar icon
+	wcex.hIcon = hIcon; //Top-left corner icon
+	wcex.hIconSm = hIcon; //Taskbar icon
 
 	wcex.lpszClassName = WindowClass;
 
@@ -39,27 +99,27 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
 
 	wcex.hInstance = HInstance(); //Reference to the instance of the program that's running
 
-	wcex.lpfnWndProc = DefWindowProc; //How the window will perform as in button interactions and such
+	wcex.lpfnWndProc = WindowProcess; //How the window will perform as in button interactions and such
 
 	RegisterClassEx(&wcex);
+}
 
-	/* - Create and Display our Window - */
-
+VOID initializeWindow() {
 	HWND hWnd = CreateWindow(WindowClass, WindowTitle, WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, 0, WindowWidth, WindowHeight, nullptr, nullptr, HInstance(), nullptr);
-		//hWnd stands for "Window Handler", and it's a representation of the entire Window
-		//CreateWindow(className, title, style, x_location, y_location, width, height, parent_window, menu, hInstance, ???)
+	//hWnd stands for "Window Handler", and it's a representation of the entire Window
+	//CreateWindow(className, title, style, x_location, y_location, width, height, parent_window, menu, hInstance, ???)
 
 	if (!hWnd) {
 		//Handler in case CreateWindow fails
 		MessageBox(0, L"Failed to Create Window!.", 0, 0);
-		return 0;
+		PostQuitMessage(0);
 	}
 
 	ShowWindow(hWnd, SW_SHOW);
+}
 
-	/* - Listen for Message events - */
-
+VOID messageLoop() {
 	MSG msg = { 0 };
 	while (msg.message != WM_QUIT) {
 		//If there are Window messages, process them
@@ -68,6 +128,7 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
 			DispatchMessage(&msg);
 		}
 	}
-
-	return 0;
 }
+
+#pragma endregion
+/* ----------------------------------------------------------- */
