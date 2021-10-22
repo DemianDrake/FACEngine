@@ -58,10 +58,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\BlankProject\src;D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\FACEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -78,6 +80,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\BlankProject\src;D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\FACEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -87,11 +91,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\pch.cpp" />
     <ClCompile Include="src\WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Icons\01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FACEngine\FACEngine.vcxproj">
+      <Project>{7bd3ebcd-9ac0-424b-97e0-9b44836b3c2a}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

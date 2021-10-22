@@ -2,6 +2,9 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\Build\FACEngine\Debug\FACEngine.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\Build\BlankProject\Debug\BlankProject.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

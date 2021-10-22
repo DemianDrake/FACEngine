@@ -1,1 +1,5 @@
-﻿  BlankProject.vcxproj -> D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\Build\BlankProject\Debug\BlankProject.exe
+﻿  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30136 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\BlankProject\src" /I"D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\FACEngine\src" /ZI /JMC /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yc"pch.h" /Fp"D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\\BlankProject\Intermediate\Debug\BlankProject.pch" /Fo"D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\\BlankProject\Intermediate\Debug\\" /Fd"D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\\BlankProject\Intermediate\Debug\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt src\Application.cpp
+  Application.cpp
+  BlankProject.vcxproj -> D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\Build\BlankProject\Debug\BlankProject.exe

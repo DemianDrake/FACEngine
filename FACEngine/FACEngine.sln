@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlankProject", "BlankProject\BlankProject.vcxproj", "{93E74B06-7D04-4D91-AE49-59FAB7A13621}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FACEngine", "FACEngine\FACEngine.vcxproj", "{7BD3EBCD-9AC0-424B-97E0-9B44836B3C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{93E74B06-7D04-4D91-AE49-59FAB7A13621}.Debug|x64.Build.0 = Debug|x64
 		{93E74B06-7D04-4D91-AE49-59FAB7A13621}.Release|x64.ActiveCfg = Release|x64
 		{93E74B06-7D04-4D91-AE49-59FAB7A13621}.Release|x64.Build.0 = Release|x64
+		{7BD3EBCD-9AC0-424B-97E0-9B44836B3C2A}.Debug|x64.ActiveCfg = Debug|x64
+		{7BD3EBCD-9AC0-424B-97E0-9B44836B3C2A}.Debug|x64.Build.0 = Debug|x64
+		{7BD3EBCD-9AC0-424B-97E0-9B44836B3C2A}.Release|x64.ActiveCfg = Release|x64
+		{7BD3EBCD-9AC0-424B-97E0-9B44836B3C2A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
