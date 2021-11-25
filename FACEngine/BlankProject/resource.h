@@ -1,10 +1,11 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by FACEngine.v0.01.rc
+// Used by BlankProject.rc
 //
 #define IDI_MAINICON                    101
 #define IDS_WINDOWCLASS                 102
-#define IDS_WINDOWTITLE                 103
+#define IDS_PERGAMENAME                 103
+#define IDS_SHORTNAME                   104
 
 // Next default values for new objects
 // 

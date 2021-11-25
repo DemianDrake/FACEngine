@@ -31,6 +31,18 @@
     <Filter Include="Source\Public\Platform\Win32">
       <UniqueIdentifier>{c2eac289-0bf6-471d-a08f-43737092e4c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Private\common">
+      <UniqueIdentifier>{d3b8adc1-2802-4b58-9a90-d7ad034d07d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\common">
+      <UniqueIdentifier>{4f08e68c-5299-45fa-99b4-ede403e3db35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\core">
+      <UniqueIdentifier>{a9ddb043-7ed6-48da-a3c6-4857e4602a92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\core">
+      <UniqueIdentifier>{c0e291b2-0c01-498d-8767-9564c2eea3d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FACEngine.cpp">
@@ -38,6 +50,15 @@
     </ClCompile>
     <ClCompile Include="src\Platform\Win32\IApplication.cpp">
       <Filter>Source\Private\Platform\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Logger.cpp">
+      <Filter>Source\Private\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\PerGameSettings.cpp">
+      <Filter>Source\Private\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Time.cpp">
+      <Filter>Source\Private\common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +70,15 @@
     </ClInclude>
     <ClInclude Include="src\Platform\Win32\WinEntry.h">
       <Filter>Source\Public\Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Logger.h">
+      <Filter>Source\Public\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\PerGameSettings.h">
+      <Filter>Source\Public\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Time.h">
+      <Filter>Source\Public\common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

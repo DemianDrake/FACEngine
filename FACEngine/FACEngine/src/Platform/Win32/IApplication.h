@@ -14,6 +14,9 @@ public:
 	virtual ~IApplication() {};
 
 public:
+	/* Called to setup our per-game settings */
+	virtual VOID SetupPerGameSettings() {};
+
 	/* Called to Initialize the Application */
 	virtual VOID Initialize() {};
 

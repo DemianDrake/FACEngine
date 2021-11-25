@@ -12,10 +12,23 @@ Application::~Application() {
 
 }
 
+VOID Application::SetupPerGameSettings() {
+	// Set per-game settings
+	PerGameSettings::SetGameName(IDS_PERGAMENAME);
+	PerGameSettings::SetShortName(IDS_SHORTNAME);
+	PerGameSettings::SetMainIcon(IDI_MAINICON);
+}
+
 VOID Application::Initialize() {
-	return VOID();
+	Log::hline();
+	Log::println(L"Application Starting...");
+	Log::println(L"Game Name: %s", PerGameSettings::GameName());
+	Log::println(L"Boot Time: %s", Time::GetDateTimeString().c_str());
+	Log::hline();
+
+	//Logger::startMTail();
 }
 
 VOID Application::Update() {
-	return VOID();
+	Log::print(L". ");
 }

@@ -102,7 +102,8 @@ END
 STRINGTABLE
 BEGIN
     IDS_WINDOWCLASS         "EngineClass"
-    IDS_WINDOWTITLE         "FACEngine"
+    IDS_PERGAMENAME         "BlankProject"
+    IDS_SHORTNAME           "BP"
 END
 
 #endif    // Spanish (Spain, International Sort) resources

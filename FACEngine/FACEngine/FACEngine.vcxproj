@@ -45,7 +45,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)\Build\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)\Build\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\$(ProjectName)\Intermediate\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -63,7 +63,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>FACEngine.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\FACEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\FACEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -82,7 +82,7 @@
       <PrecompiledHeaderFile>FACEngine.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>D:\Le Bureau\Universidad\2021 - Primavera\Arquitectura Game Engines\FACEngine\FACEngine\FACEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\FACEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,10 +92,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\common\Logger.cpp" />
+    <ClCompile Include="src\common\Time.cpp" />
+    <ClCompile Include="src\core\PerGameSettings.cpp" />
     <ClCompile Include="src\FACEngine.cpp" />
     <ClCompile Include="src\Platform\Win32\IApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\common\Logger.h" />
+    <ClInclude Include="src\common\Time.h" />
+    <ClInclude Include="src\core\PerGameSettings.h" />
     <ClInclude Include="src\FACEngine.h" />
     <ClInclude Include="src\Platform\Win32\IApplication.h" />
     <ClInclude Include="src\Platform\Win32\WinEntry.h" />
